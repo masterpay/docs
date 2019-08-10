@@ -1,0 +1,55 @@
+Register new User
+Login in User
+Register new company
+    RSZ NR
+    parliamentary committee
+        (minimum wage, compensations, working time, absences, economic unemployment, short leave, ...)
+        Multiple per company
+    ...
+Register new employee
+    Personal information
+        per company. Some companies still calculate as if not married
+    Contractual information per company
+        Recruitment date
+        Salary
+        statute (white/blue collar)
+        Function (Bookshop that also serves drinks has sales people and servers)
+            Choice of committee depends on a combination of statute and function
+        Duration (determinate/indeterminate)
+        Hours worked per week
+            Schedule (Monday x hours, Tuesday y hours)
+        Shifts
+    Historical data
+        buildup of vacation at previous employee
+        performance of current and previous year
+Input performance:
+    Vacation days
+    Sick leave
+    Holidays
+    Abscesses(legal/illegal)
+    Short leaves
+    Performed hours
+    Cash advances (already payed partial wages)
+    Others (paternal leave, ...)
+Do calculation for wages.
+    RSZ employee
+    RSZ employer
+    Net wage
+    Payroll tax
+    Contribution to funds
+        Contribution to end of year bonus
+        Short leave due to weather (in construction)
+        ...
+Generate PDF
+    Template with fields for calculated numbers
+    Temporary drafts
+Publish final calculation
+    Put PDF In public bucket
+    (keep in mind that some are quarterly, yearly, monthly, ...)
+    Do declaration to government
+        dmfa -> multifunctionele aangifte (loongegevens, rsz aangeven aan overheid)
+        asr -> Aangifte sociale risicos (aangifte naar mutualiteiten en vakbonden)
+        dimona -> aangifte begin/einddatum tewerkstelling (naar overheid)
+        fiscaal -> bedrijfsvoorheffing (naar overheid)
+        ...
+

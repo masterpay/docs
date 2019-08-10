@@ -1,0 +1,13 @@
+Each entity will get an applicable range existing of 2 columns StartTime and EndTime.
+For each entity in the database we set the unique identifier to
+    ID + StartTime
+
+We never update any existing records. Instead we make a copy of it. We set the EndTime of the existing record to `now`
+and set the startTime of the copy to `now` as well. We leave the EndTime of the new record as `NULL`
+
+`NULL` has a well defined meaning for applicable ranges. There can only be one entry with a Null on the EndTime. This will
+be considered the current active one.
+
+For a single entity there should never be any entries with overlapping applicable range and the same ID.
+
+Deleting can be achieved by setting the EndTime of the current active record

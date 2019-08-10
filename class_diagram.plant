@@ -1,0 +1,53 @@
+@startuml
+class Employment
+class User
+class PersonalInfo {
+	String Key
+    String value
+}
+class Contract {
+	Float Salary
+    Date RecruitmentDate
+    Enum Statute
+    Enum Function
+    Enum Duration
+    Float HoursPerWeek
+}
+class Company {
+	ID RszNr
+}
+class Performance {
+	Date date
+    Float Vacation
+    Float Sick
+    Float Holiday
+    Float LegalAbscence
+    Float IllegalAbscense
+    Float PerformedHours
+    Float CashAdvances
+}
+class Calculation
+class Comitee {
+	ID ISONR
+    String name
+}
+class ComiteeData {
+	String Key
+    Float Value
+    Enum Fixes/Percentage
+}
+
+Employment "1" -- "1" Contract
+Employment "1" -- "*" Performance
+Employment "*" -- "1" User
+Employment "1" -- "*" PersonalInfo
+Employment "*" -- "1" Company
+
+User "1" -- "*" PersonalInfo
+
+Company "*" -- "*" Comitee
+
+Comitee "*" -- "*" ComiteeData
+
+Calculation "*" -- "*" Performance
+@enduml
